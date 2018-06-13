@@ -23,9 +23,11 @@ function onYouTubeApiLoad() {
 
 function search() {
     // Use the JavaScript client library to create a search.list() API call.
+	var key = document.getElementById('keyword').value;
     var request = gapi.client.youtube.search.list({
         part: 'id',
-        q: 'beach',
+        //q: key,
+        q: 'fortnite',
         eventType: 'live',
         type: 'video',
 		maxResults: 8
