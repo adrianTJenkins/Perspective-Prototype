@@ -1,0 +1,191 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Anaheim|Dosis" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <section id="main">
+        <header>
+            <i id="logo" class="fas fa-camera-retro"></i>
+            <h1>Welcome to Perspective!</h1>
+            <p> This application enables a unique viewing experience for your favorite events! We combine multiple live views of an event and allow you to dynamically switch between offered views to give you the best perspective.</p>
+        </header>
+    </section>
+    <div id=playback>
+        <section id="videos">
+			
+			<!---
+            <div class="vid" id="player"> </div>
+            <div class="vid" id="player1"> </div>
+            <div class="vid" id="player2"> </div>
+            <div class="vid" id="player3"> </div>
+            <div class="vid" id="player4"> </div>
+            <div class="vid" id="player5"> </div>
+            <div class="vid" id="player6"> </div>
+            <div class="vid" id="player7"> </div>
+			-->
+				
+            <script>
+            // 2. This code loads the IFrame Player API code asynchronously.
+            var tag = document.createElement('script');
+
+            tag.src = "https://www.youtube.com/iframe_api";
+            var firstScriptTag = document.getElementsByTagName('script')[0];
+            firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+            // 3. This function creates an <iframe> (and YouTube player)
+            //    after the API code downloads.
+            var player;
+
+            function onYouTubeIframeAPIReady() {
+            	
+            	/*
+                player = new YT.Player('player', {
+                    height: '200',
+                    width: '340',
+                    videoId: 'LsBrT6vbQa8',
+                    events: {
+                        'onReady': onPlayerReady,
+                    }
+                });
+
+                player1 = new YT.Player('player1', {
+                    height: '200',
+                    width: '340',
+                    videoId: 'H4r_e9JJoj8',
+                    events: {
+                        'onReady': onPlayerReady,
+                    }
+                });
+
+                player2 = new YT.Player('player2', {
+                    height: '200',
+                    width: '340',
+                    videoId: '6KVjo36lrSw',
+                    events: {
+                        'onReady': onPlayerReady,
+                    }
+                });
+
+                player3 = new YT.Player('player3', {
+                    height: '200',
+                    width: '340',
+                    videoId: 'WAxY4wfN2C0',
+                    events: {
+                        'onReady': onPlayerReady,
+                    }
+                });
+
+                player4 = new YT.Player('player4', {
+                    height: '200',
+                    width: '340',
+                    videoId: 'WAxY4wfN2C0',
+                    events: {
+                        'onReady': onPlayerReady,
+                    }
+                });
+
+                player5 = new YT.Player('player5', {
+                    height: '200',
+                    width: '340',
+                    videoId: 'LsBrT6vbQa8',
+                    events: {
+                        'onReady': onPlayerReady,
+                    }
+                });
+
+                player6 = new YT.Player('player6', {
+                    height: '200',
+                    width: '340',
+                    videoId: 'H4r_e9JJoj8',
+                    events: {
+                        'onReady': onPlayerReady,
+                    }
+                });
+
+                player7 = new YT.Player('player7', {
+                    height: '200',
+                    width: '340',
+                    videoId: '6KVjo36lrSw',
+                    events: {
+                        'onReady': onPlayerReady,
+                    }
+                });
+			
+                
+                */
+            }
+
+            // 4. The API will call this function when the video player is ready.
+            function onPlayerReady(event) {
+                event.target.playVideo();
+                event.target.mute();
+            }
+            </script>
+        </section>
+        <section id="controls">
+            <div class="buttons">
+                <button id="mute-toggle">P1 un-mute</button>
+                <button id="mute-toggle1">P2 un-mute</button>
+                <button id="mute-toggle2">P3 un-mute</button>
+                <button id="mute-toggle3">P4 un-mute</button>
+                <button id="mute-toggle4">P5 un-mute</button>
+                <button id="mute-toggle5">P6 un-mute</button>
+                <button id="mute-toggle6">P7 un-mute</button>
+                <button id="mute-toggle7">P8 un-mute</button>
+            </div>
+            <br>
+            <br>
+            <hr> Supported key commands to control the active player:
+            <ul>
+                <li>[f]: Toggle full-screen display
+                </li>
+                <li>[j]: Jump back 10 seconds
+                </li>
+                <li>[k]: Play / Pause
+                </li>
+                <li>[l]: Jump ahead 10 seconds
+                </li>
+                <li>[m]: Mute or unmute
+                </li>
+                <li>[0-9]: Jump to a point.
+                    <br>0 jumps to the beginning,
+                    <br>1 jumps to the time 10%,
+                    <br>2 jumps to the time 20%,
+                    <br> etc.
+                </li>
+            </ul>
+            In addition, pressing the arrow keys jumps 5 seconds back (arrow left) or ahead (arrow right) in the current video.
+        </section>
+    </div>
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/player.js"></script>
+    <script>
+    
+	var youtubeSearch = null;
+    function searchCompleted(response) {
+		youtubeSearch = response;
+		for (var k=0; k<youtubeSearch.items.length; k++)
+		{
+			$('#videos').append('<div class="vid" id="player' + k+ '"> </div>');
+            var player = new YT.Player('player' + k, {
+                height: '200',
+                width: '340',
+                videoId: youtubeSearch.items[k].id.videoId,
+                events: {
+                    'onReady': onPlayerReady,
+                }
+            });
+		}
+    }
+	
+    </script>
+    <script src="search.js" type="text/javascript"></script>
+    <script src="https://apis.google.com/js/client.js?onload=onClientLoad" type="text/javascript"></script>
+</body>
+
+</html>

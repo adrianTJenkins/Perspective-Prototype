@@ -1,0 +1,157 @@
+/*
+  Color Pallette: http://www.colourlovers.com/palette/623761/Walking_Away
+  Light Grey: #F6F6F6
+  Mid Grey:   #E8E8E8
+  Dark Grey:  #333333
+  Dark Red:   #990100
+  Red:        #B90504
+
+  Body Text: Dark Grey
+  Headings: Dark Red
+  Accents,Icons,Structural,Links: Red
+
+  Fonts: GoogleFonts
+    Headings: Anaheim
+    Body: Dosis
+
+*/
+
+
+body {
+
+  font-family: 'Dosis', sans-serif;
+
+}
+
+
+h1, h2, h3, h4 {
+  font-family: 'Anaheim', sans-serif;
+
+}
+
+a{
+  color: #B90504;
+
+}
+
+a.active {
+
+color: #E8E8E8;
+
+}
+
+a:hover{
+
+  color: #333333;
+}
+
+#header {
+  margin-left: 2em;
+  width: 80%;
+}
+
+#main header h1{
+  color: #990100;
+  font-size: 2em;
+  margin-bottom: -.5em;
+
+}
+
+#main header{
+  border-bottom: 1px solid #990100;
+}
+
+#logo {
+  position: absolute;
+  color: #B90504;
+  font-size: 7em;
+  margin-left: -1.2em;
+  display:none;
+}
+
+@media (min-width:1200px){
+  #logo {
+    display: inline-block;
+
+  }
+}
+
+
+#main {
+
+  min-width: 800px;
+  max-width: 900px;
+  font-family: 'Dosis', sans-serif;
+  margin: auto;
+  color: #333333;
+
+}
+
+#playback{
+  min-width: 800px;
+  max-width: 900px;
+  margin: auto;
+
+
+}
+
+#videos {
+  min-width: 600px;
+  max-width: 650px;
+  float:left;
+
+}
+
+#controls {
+  min-width: 200px;
+  max-width: 250px;
+  float: right;
+
+}
+
+iframe {
+  border: 2px solid #990100;
+  margin-top: .5em;
+  margin-right: .5em;
+  width: 300px;
+  height: 200px;
+}
+
+
+
+#controls .buttons {
+  float:right;
+  display:block;
+  padding-left:3em;
+
+
+}
+
+input[type="button"],
+button,
+.button{
+
+		background-color: transparent;
+		border-radius: 0.375em;
+		border: 0;
+		box-shadow: inset 0 0 0 2px #990100 ;
+		color: #B90504 !important;
+		cursor: pointer;
+		display: inline-block;
+		font-family: "Anaheim", sans-serif;
+		font-size: 0.8em;
+		font-weight: 700;
+		height: 3.5em;
+    width: 140px;
+		letter-spacing: 0.075em;
+		line-height: 3.5em;
+		padding: 0 auto;
+    margin-top: .5em;
+    margin-bottom: .5em;
+    text-align: center;
+		text-decoration: none;
+		white-space: nowrap;
+	}
+
+
+}
