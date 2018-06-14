@@ -21,13 +21,23 @@ function onYouTubeApiLoad() {
     search();
 }
 
+function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+
 function search() {
     // Use the JavaScript client library to create a search.list() API call.
 	var key = document.getElementById('keyword').value;
     var request = gapi.client.youtube.search.list({
         part: 'id',
         //q: key,
-        q: 'fortnite',
+        q: getParameterByName('q'),
         eventType: 'live',
         type: 'video',
 		maxResults: 8
@@ -45,3 +55,4 @@ function getId(request) {
 function onSearchResponse(response) {
     showResponse(response);
 }
+
