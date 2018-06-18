@@ -89,8 +89,8 @@ a:hover{
 }
 
 #homeSearch {
-	margin: auto;
-	width: 50%;
+	border: none;
+  font-size: 17px;
 }
 
 #playback{
