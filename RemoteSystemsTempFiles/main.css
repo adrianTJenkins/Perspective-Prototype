@@ -16,7 +16,6 @@
 
 */
 
-
 body {
 
   font-family: 'Dosis', sans-serif;
@@ -42,23 +41,29 @@ color: #E8E8E8;
 
 a:hover{
 
-  color: #333333;
+
 }
 
-#header {
-  margin-left: 2em;
-  width: 80%;
+#adminLogin {
+	float: right;
+	text-align: right;
+	color: #990100;
+	margin-top: -2.5em;
+}
+
+#keyword {
+	width: 75%;
+	height: 5.5%;
 }
 
 #main header h1{
   color: #990100;
   font-size: 2em;
-  margin-bottom: -.5em;
+  margin-bottom: 0.25em;
 
 }
 
 #main header{
-  border-bottom: 1px solid #990100;
   
 }
 
@@ -79,18 +84,26 @@ a:hover{
 
 
 #main {
-
+  margin-left: 2vw;
   min-width: 800px;
   max-width: 900px;
   font-family: 'Dosis', sans-serif;
-  margin: auto;
   color: #333333;
-
 }
 
 #homeSearch {
-	border: none;
+  border: none;
   font-size: 17px;
+  position: relative;
+  margin: auto;
+  width: 50%;
+  top: 30vh;
+  text-align: center;
+}
+
+#homeSearch h3 {
+	font-size: 35px;
+	color: #990100;
 }
 
 #playback{
@@ -99,6 +112,11 @@ a:hover{
   margin: auto;
 
 
+}
+
+#sub {
+	width: 10%;
+	height: 5%;
 }
 
 #videos {
