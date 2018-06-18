@@ -59,6 +59,7 @@ a:hover{
 
 #main header{
   border-bottom: 1px solid #990100;
+  
 }
 
 #logo {
@@ -85,6 +86,11 @@ a:hover{
   margin: auto;
   color: #333333;
 
+}
+
+#homeSearch {
+	margin: auto;
+	width: 50%;
 }
 
 #playback{
