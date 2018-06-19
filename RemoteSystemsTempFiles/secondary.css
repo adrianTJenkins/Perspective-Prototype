@@ -1,21 +1,3 @@
-/*
-  Color Pallette: http://www.colourlovers.com/palette/623761/Walking_Away
-  Light Grey: #F6F6F6
-  Mid Grey:   #E8E8E8
-  Dark Grey:  #333333
-  Dark Red:   #990100
-  Red:        #B90504
-
-  Body Text: Dark Grey
-  Headings: Dark Red
-  Accents,Icons,Structural,Links: Red
-
-  Fonts: GoogleFonts
-    Headings: Anaheim
-    Body: Dosis
-
-*/
-
 body {
 
   font-family: 'Dosis', sans-serif;
@@ -120,7 +102,7 @@ a:hover{
 }
 
 #videos {
-  min-width: 600px;
+  min-width: 90px;
   max-width: 1280px;
   float:left;
 
@@ -137,8 +119,8 @@ iframe {
   border: none;
   margin-top: 1.5em;
   margin-right: 1.5em;
-  width: 400px;
-  height: 250px;
+  width: 120px;
+  height: 80px;
 }
 
 
@@ -181,4 +163,15 @@ button,
   font-size: 17px;
   padding-left: 200px;
   margin-left: 300px;
+}
+
+#bigPlayer {
+  border: none;
+  margin-top: 1.5em;
+  margin-right: 1.5em;
+  margin-left: 420px;
+  width: 600px;
+  height: 400px;
+  position: relative;
+  text-align: center;
 }
