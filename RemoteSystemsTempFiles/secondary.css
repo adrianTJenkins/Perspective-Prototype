@@ -19,7 +19,8 @@
 body {
 
   font-family: 'Dosis', sans-serif;
-
+  background-color: #e1e1e1;
+  margin: 0;
 }
 
 
@@ -52,49 +53,41 @@ a:hover{
 }
 
 #keyword {
-	width: 75%;
+	width: 35%;
 	height: 5%;
 	min-height: 40px;
 	border-style: solid;
   	border-color: #990100;
   	border-radius: 15px;
   	padding: 2px 5px;
-  	padding-right: 70px;
+  	text-algin: center;
+  	margin: auto;
 }
 
 #main header h1{
   color: #990100;
   font-size: 2em;
   margin-bottom: 0.25em;
-
-}
-
-#main header{
   
 }
 
-#logo {
-  position: absolute;
-  color: #B90504;
-  font-size: 7em;
-  margin-left: -1.2em;
-  display:none;
+#main header{
+	background-color: #ffffff;
+	background-size: 100% 20%;
 }
 
 @media (min-width:1200px){
   #logo {
     display: inline-block;
-
   }
 }
 
 
 #main {
-  margin-left: 2vw;
   min-width: 800px;
-  max-width: 900px;
   font-family: 'Dosis', sans-serif;
   color: #333333;
+  margin-top: -3.5vh;
 }
 
 #homeSearch {
@@ -126,7 +119,7 @@ a:hover{
 
 #videos {
   min-width: 600px;
-  max-width: 650px;
+  max-width: 1280px;
   float:left;
 
 }
@@ -139,11 +132,11 @@ a:hover{
 }
 
 iframe {
-  border: 2px solid #990100;
-  margin-top: .5em;
-  margin-right: .5em;
-  width: 300px;
-  height: 200px;
+  border: none;
+  margin-top: 1.5em;
+  margin-right: 1.5em;
+  width: 400px;
+  height: 250px;
 }
 
 
@@ -175,7 +168,7 @@ button,
 		padding: 0 auto;
     margin-top: .5em;
     margin-bottom: .5em;
-    margin-left: -70px;
+    margin-left: -90px;
     text-align: center;
 		text-decoration: none;
 		white-space: nowrap;
@@ -184,7 +177,8 @@ button,
 
 }
 
-.search-container {
+#search-container {
   border: none;
   font-size: 17px;
+  padding-left: 300px;
 }
