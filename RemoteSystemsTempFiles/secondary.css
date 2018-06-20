@@ -119,6 +119,7 @@ iframe {
   border: none;
   margin-top: 1.5em;
   margin-right: 1.5em;
+  margin-bottom: 0.5em;
   width: 120px;
   height: 80px;
 }
@@ -157,6 +158,12 @@ button,
 		text-decoration: none;
 		white-space: nowrap;
 	}
+	
+.camera {
+	position: relative;
+	right: 65px;
+	top: 5px;
+}
 
 #search-container {
   border: none;
@@ -168,7 +175,7 @@ button,
 #bigPlayer {
   border: none;
   margin-top: 1.5em;
-  margin-right: 1.5em;
+  margin-right: 2em;
   margin-left: 420px;
   width: 600px;
   height: 400px;

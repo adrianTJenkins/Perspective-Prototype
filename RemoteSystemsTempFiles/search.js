@@ -36,7 +36,6 @@ function search() {
 	var key = document.getElementById('keyword').value;
     var request = gapi.client.youtube.search.list({
         part: 'id',
-        //q: key,
         q: getParameterByName('q'),
         eventType: 'live',
         type: 'video',
@@ -54,5 +53,10 @@ function getId(request) {
 // Called automatically with the response of the YouTube API request.
 function onSearchResponse(response) {
     showResponse(response);
+}
+
+// Feeds the VideoId to the Big Video Player
+function feedId(num) {
+	$('#bigPlayer').attr('src', $(num).attr('src'));
 }
 
