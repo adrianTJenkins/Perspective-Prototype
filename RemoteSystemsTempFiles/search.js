@@ -39,7 +39,7 @@ function search() {
         q: getParameterByName('q'),
         eventType: 'live',
         type: 'video',
-		maxResults: '12'
+		maxResults: '10'
     });
     // Send the request to the API server,
     // and invoke onSearchRepsonse() with the response.

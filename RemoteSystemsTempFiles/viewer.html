@@ -15,8 +15,8 @@
             <h1>Perspective</h1>
         	<div id="search-container">
     			<form>
-      				<input id = "keyword" type="text" onkeyup = "search()" placeholder="Enter keywords..." name = "q">
-      				<button type="submit"><i class="fa fa-search"></i></button>
+      				<input id = "keyword" type="text"  placeholder="Enter keywords..." name = "q">
+      				<button type="submit" onkeyup = "search()"><i class="fa fa-search"></i></button>
     			</form>
     			
   			</div>
@@ -50,12 +50,13 @@
     <script src="assets/js/player.js"></script>
     
     <script>
+    
 	var youtubeSearch = null;
     function searchCompleted(response) {
 		youtubeSearch = response;
 		for (var k=0; k<youtubeSearch.items.length; k++)
 		{
-			$('#videos').append('<div class="vid" id="player' + k+ '"> </div>');
+			$('#videos').append('<div class = "boxes"><div class="vid" id="player' + k+ '"> </div></div>');
             var player = new YT.Player('player' + k, {
                 height: '60px',
                 width: '90px',
@@ -65,7 +66,26 @@
                 }
             });
             var j = k+1;
-           $('#videos').append('<button class = "camera" onclick = "$("player' + k+ '").addClass('bigPlayer')">Camera ' + j+ '</button>'); 
+           $('#player' + k).after('<button id = "cam' + k+'" class = "camera")">Camera ' + j+ '</button>'); 
+           $('#cam' +k).click(function() {
+        	   
+        	   var ele = ($(this).attr('id').substring(3)); //This will remove bigPlayer from everything, then add it back to the one player
+        	   
+        	   $('.vid').removeClass("bigPlayer"); //removes (downsizes) everything
+        	   
+        	   $('#player' + ele).addClass("bigPlayer"); //adds (upsizes) the one player
+        	   
+        	   $('.bigBox').addClass("boxes");
+        	   
+        	   $('.vid').parent().removeClass("bigBox");
+        	   
+        	   $('#player' + ele).parent().addClass("bigBox");
+        	   
+        	   $('#player' + ele).parent().removeClass("boxes");
+        	   
+        	   $('.boxes').first().before($('.bigBox'));
+        	  
+           });
 		}
     }
     </script>
