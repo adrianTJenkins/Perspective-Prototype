@@ -1,0 +1,184 @@
+body {
+
+  font-family: 'Dosis', sans-serif;
+  background-color: #f1f1f1;
+  margin: 0;
+}
+
+
+h1, h2, h3, h4 {
+  font-family: 'Anaheim', sans-serif;
+
+}
+
+a{
+  color: #B90504;
+
+}
+
+a.active {
+
+color: #E8E8E8;
+
+}
+
+a:hover{
+
+
+}
+
+#adminLogin {
+	float: right;
+	text-align: right;
+	color: #990100;
+	margin-top: -2.5em;
+}
+
+#keyword {
+	width: 45%;
+	height: 5%;
+	min-height: 40px;
+	border-style: solid;
+  	border-color: #990100;
+  	border-radius: 15px;
+  	padding: 2px 5px;
+  	text-algin: center;
+  	margin: auto;
+}
+
+#main header h1{
+  color: #990100;
+  font-size: 2em;
+  margin-bottom: 0.25em;
+  margin-left: 15px;
+  
+}
+
+#main header{
+	background-color: #ffffff;
+	background-size: 100% 20%;
+}
+
+@media (min-width:1200px){
+  #logo {
+    display: inline-block;
+  }
+}
+
+
+#main {
+  min-width: 800px;
+  font-family: 'Dosis', sans-serif;
+  color: #333333;
+  margin-top: -3.5vh;
+  
+}
+
+#homeSearch {
+  font-size: 17px;
+  position: relative;
+  margin: auto;
+  width: 50%;
+  top: 30vh;
+  text-align: center;
+}
+
+#homeSearch h3 {
+	font-size: 35px;
+	color: #990100;
+}
+
+#playback{
+  min-width: 800px;
+  max-width: 900px;
+  margin: auto;
+
+
+}
+
+#sub {
+	width: 10%;
+	height: 5%;
+}
+
+#videos {
+  min-width: 90px;
+  max-width: 1280px;
+  float:left;
+
+}
+
+#controls {
+  min-width: 200px;
+  max-width: 250px;
+  float: right;
+
+}
+
+iframe {
+  border: none;
+  margin-top: 1.5em;
+  margin-right: 1.5em;
+  margin-bottom: 0.5em;
+  width: 120px;
+  height: 80px;
+}
+
+
+
+#controls .buttons {
+  float:right;
+  display:block;
+  padding-left:3em;
+
+
+}
+
+input[type="button"],
+button,
+.button{
+
+		background-color: transparent;
+		border: none;
+		color: #B90504 !important;
+		cursor: pointer;
+		display: inline-block;
+		font-family: "Anaheim", sans-serif;
+		font-size: 0.8em;
+		font-weight: 700;
+		height: 3.5em;
+    width: 140px;
+		letter-spacing: 0.075em;
+		line-height: 3.5em;
+		padding: 0 auto;
+    margin-top: .5em;
+    margin-bottom: .5em;
+    margin-left: -90px;
+    text-align: center;
+		text-decoration: none;
+		white-space: nowrap;
+	}
+	
+.camera {
+	position: relative;
+	right: 65px;
+	top: 5px;
+}
+
+#search-container {
+  border: none;
+  font-size: 17px;
+  padding-left: 200px;
+  margin-left: 300px;
+}
+
+#bigPlayer {
+  border: none;
+  margin-top: 1.5em;
+  margin-right: 2em;
+  margin-left: 420px;
+  width: 600px;
+  height: 400px;
+  position: relative;
+  text-align: center;
+}
