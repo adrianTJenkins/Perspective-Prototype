@@ -1,95 +1,48 @@
-$('#mute-toggle').on('click', function() {
-    var mute_toggle = $(this); // The button
+function bindCameraButtons() {
 
-    if (player.isMuted()) {
-        player.unMute();
-        mute_toggle.text('P1 mute');
+$('button[id^="cam"]').click(function(){
+
+  console.log("button clicked!")
+  var ele = ($(this).attr('id').substring(3)); // This will remove bigPlayer from everything, then add it back to the one player
+
+  if($('.bigPlayer').length == 0) {
+  console.log($('.bigPlayer').length);
+    $('#player' + ele).addClass("bigPlayer");
+    $('#player' + ele).parent().addClass("bigBox");
+    $('.boxes').first().before($('.bigBox'));
+  } else {
+    if($('#player' + ele).hasClass("bigPlayer"))
+    {
+      var ret = parseInt(ele, 10);
+      ret += 1;
+      console.log(ret);
+      $('#player' + ret).parent().before($('.bigBox'));
+      $('#player' + ele).removeClass("bigPlayer");
+      $('#player' + ele).parent().removeClass("bigBox");
+      $('#player' + ele).parent().addClass("boxes");
     } else {
-        player.mute();
-        mute_toggle.text('P1 un-mute');
+
+      console.log($('.bigPlayer').attr('id')); //Logs the id of the big player
+      var ele2 = ($('.bigPlayer').attr('id').substring(6)); // grabs and stores the number from the id of the big player
+
+      $('.vid').removeClass("bigPlayer"); //removes (downsizes) everything by removing the bigplayer class from all iframes
+      $('#player' + ele).addClass("bigPlayer"); //adds (upsizes) the one player based on the button that was clicked
+
+      // Moves the existing big player to it's rightful shrunken position
+      var ret = parseInt(ele2, 10); // converts the substring number to an integer
+      ret += 1; // adds one to the players position to represent the player it precedes
+      console.log(ret);
+
+      $('#player' + ret).parent().before($('.bigBox')); // inserts the current bigBox player in it's original position preceding it's number
+      //$('#player' + ele2).parent().removeClass("bigBox"); // removes the bigbox class
+      //$('#player' + ele2).parent().addClass("boxes"); // restores the boxes class
+
+      $('.bigBox').addClass("boxes"); //restores the boxes class to all bigboxes
+      $('.vid').parent().removeClass("bigBox"); // removes all bigboxes
+      $('#player' + ele).parent().addClass("bigBox"); //Makes the currently clicked player the bigBox
+      $('#player' + ele).parent().removeClass("boxes"); // Removes the boxes class from the current player
+      $('.boxes').first().before($('.bigBox')); //Moves the bigBox before the first box
     }
+  }
 });
-
-$('#mute-toggle1').on('click', function() {
-    var mute_toggle = $(this); // The button
-
-    if (player1.isMuted()) {
-        player1.unMute();
-        mute_toggle.text('P2 mute');
-    } else {
-        player1.mute();
-        mute_toggle.text('P2 un-mute');
-    }
-});
-
-$('#mute-toggle2').on('click', function() {
-    var mute_toggle = $(this); // The button
-
-    if (player2.isMuted()) {
-        player2.unMute();
-        mute_toggle.text('P3 mute');
-    } else {
-        player2.mute();
-        mute_toggle.text('P3 un-mute');
-    }
-});
-
-$('#mute-toggle3').on('click', function() {
-    var mute_toggle = $(this); // The button
-
-    if (player3.isMuted()) {
-        player3.unMute();
-        mute_toggle.text('P4 mute');
-    } else {
-        player3.mute();
-        mute_toggle.text('P4 un-mute');
-    }
-});
-
-$('#mute-toggle4').on('click', function() {
-    var mute_toggle = $(this); // The button
-
-    if (player4.isMuted()) {
-        player4.unMute();
-        mute_toggle.text('P5 mute');
-    } else {
-        player4.mute();
-        mute_toggle.text('P5 un-mute');
-    }
-});
-
-$('#mute-toggle5').on('click', function() {
-    var mute_toggle = $(this); // The button
-
-    if (player5.isMuted()) {
-        player5.unMute();
-        mute_toggle.text('P6 mute');
-    } else {
-        player5.mute();
-        mute_toggle.text('P6 un-mute');
-    }
-});
-
-$('#mute-toggle6').on('click', function() {
-    var mute_toggle = $(this); // The button
-
-    if (player6.isMuted()) {
-        player6.unMute();
-        mute_toggle.text('P7 mute');
-    } else {
-        player6.mute();
-        mute_toggle.text('P7 un-mute');
-    }
-});
-
-$('#mute-toggle7').on('click', function() {
-    var mute_toggle = $(this); // The button
-
-    if (player7.isMuted()) {
-        player7.unMute();
-        mute_toggle.text('P8 mute');
-    } else {
-        player7.mute();
-        mute_toggle.text('P8 un-mute');
-    }
-});
+}
