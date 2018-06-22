@@ -13,7 +13,12 @@ h1, h2, h3, h4 {
 
 a{
   color: #B90504;
+}
 
+h1 a {
+	text-decoration: none;
+	font-family: 'Anaheim', sans-serif;
+	letter-spacing: 0.075em;
 }
 
 a.active {
@@ -30,7 +35,7 @@ a:hover{
 #adminLogin {
 	float: right;
 	text-align: right;
-	color: #990100;
+	color: #B90504;
 	margin-top: -2.5em;
 }
 
@@ -131,6 +136,10 @@ iframe {
   padding-left:3em;
 
 
+}
+
+#home {
+	margin: auto 0px;
 }
 
 input[type="button"],

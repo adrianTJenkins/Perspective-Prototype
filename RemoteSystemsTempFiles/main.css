@@ -30,7 +30,12 @@ h1, h2, h3, h4 {
 
 a{
   color: #B90504;
+}
 
+h1 a {
+	text-decoration: none;
+	font-family: 'Anaheim', sans-serif;
+	letter-spacing: 0.075em;
 }
 
 a.active {
@@ -47,7 +52,7 @@ a:hover{
 #adminLogin {
 	float: right;
 	text-align: right;
-	color: #990100;
+	color: #B90504;
 	margin-top: -2.5em;
 }
 
@@ -56,14 +61,14 @@ a:hover{
 	height: 5%;
 	min-height: 40px;
 	border-style: solid;
-  	border-color: #990100;
+  	border-color: #B90504;
   	border-radius: 15px;
   	padding: 2px 5px;
   	padding-right: 70px;
 }
 
 #main header h1{
-  color: #990100;
+  color: #B90504;
   font-size: 2em;
   margin-bottom: 0.25em;
 
@@ -108,7 +113,7 @@ a:hover{
 
 #homeSearch h3 {
 	font-size: 35px;
-	color: #990100;
+	color: #B90504;
 }
 
 #playback{
