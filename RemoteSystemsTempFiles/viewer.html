@@ -69,11 +69,46 @@
            $('#player' + k).after('<button id = "cam' + k+'" class = "camera")">Camera ' + j+ '</button>'); 
            $('#cam' +k).click(function() {
         	   
+        	   
         	   var ele = ($(this).attr('id').substring(3)); //This will remove bigPlayer from everything, then add it back to the one player
+        	   
+				if($('.bigPlayer').length) {
+					$('#player' + ele).addClass("bigPlayer");
+					$('#player' + ele).parent().addClass("bigBox");
+        	   	}
+				
+				else {
+        	   if($('#player' + ele).hasClass("bigPlayer"))
+    		   {
+        		   var ret = parseInt(ele, 10);
+        		   ret += 1;
+        		   	console.log(ret);
+        		   	$('#player' + ret).parent().before($('.bigBox'));
+        		    $('#player' + ele).removeClass("bigPlayer");
+    		   		$('#player' + ele).parent().removeClass("bigBox");    
+    		   		$('#player' + ele).parent().addClass("boxes");
+    		   }
+        	   
+        	   else
+        		   {
+        	   	    
+        	      
+        	   
+        	   
+        	   var ele2 = ($('.bigPlayer').attr('id').substring(6));
         	   
         	   $('.vid').removeClass("bigPlayer"); //removes (downsizes) everything
         	   
         	   $('#player' + ele).addClass("bigPlayer"); //adds (upsizes) the one player
+        	   
+        	   
+    		   var ret = parseInt(ele, 10);
+    		   ret += 1;
+    		   	console.log(ele);
+    		   	$('#player' + ret).parent().before($('.bigBox'));
+    		    //$('#player' + ele2).removeClass("bigPlayer");
+		   		$('#player' + ele2).parent().removeClass("bigBox");    
+		   		$('#player' + ele2).parent().addClass("boxes");  
         	   
         	   $('.bigBox').addClass("boxes");
         	   
@@ -84,7 +119,8 @@
         	   $('#player' + ele).parent().removeClass("boxes");
         	   
         	   $('.boxes').first().before($('.bigBox'));
-        	  
+        		   }
+				}
            });
 		}
     }
