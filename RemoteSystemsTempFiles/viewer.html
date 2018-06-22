@@ -72,9 +72,12 @@
         	   
         	   var ele = ($(this).attr('id').substring(3)); //This will remove bigPlayer from everything, then add it back to the one player
         	   
-				if($('.bigPlayer').length) {
-					$('#player' + ele).addClass("bigPlayer");
-					$('#player' + ele).parent().addClass("bigBox");
+				if($('.bigPlayer').length === 0) {
+					$('#player' + ele).addClass("bigPlayer"); //Adds Big size to current player
+					
+					$('#player' + ele).parent().addClass("bigBox"); //Adds Big positioning to current player
+					
+					$('.boxes').first().before($('.bigBox'));
         	   	}
 				
 				else {
@@ -84,9 +87,9 @@
         		   ret += 1;
         		   	console.log(ret);
         		   	$('#player' + ret).parent().before($('.bigBox'));
-        		    $('#player' + ele).removeClass("bigPlayer");
-    		   		$('#player' + ele).parent().removeClass("bigBox");    
-    		   		$('#player' + ele).parent().addClass("boxes");
+        		    $('#player' + ele).removeClass("bigPlayer"); //Removes Big size from current player
+    		   		$('#player' + ele).parent().removeClass("bigBox"); //Removes Big size from current player  
+    		   		$('#player' + ele).parent().addClass("boxes"); //
     		   }
         	   
         	   else
@@ -102,9 +105,9 @@
         	   $('#player' + ele).addClass("bigPlayer"); //adds (upsizes) the one player
         	   
         	   
-    		   var ret = parseInt(ele, 10);
+    		   var ret = parseInt(ele2, 10);
     		   ret += 1;
-    		   	console.log(ele);
+    		   	console.log(ret);
     		   	$('#player' + ret).parent().before($('.bigBox'));
     		    //$('#player' + ele2).removeClass("bigPlayer");
 		   		$('#player' + ele2).parent().removeClass("bigBox");    
