@@ -156,6 +156,10 @@ iframe {
 
 }
 
+#home {
+	margin: auto 0px;
+}
+
 input[type="button"],
 button,
 .button{
