@@ -33,7 +33,13 @@ $('button[id^="cam"]').click(function(){
       ret += 1; // adds one to the players position to represent the player it precedes
       console.log(ret);
 
-      $('#player' + ret).parent().before($('.bigBox')); // inserts the current bigBox player in it's original position preceding it's number
+      if($('#player9').parent().hasClass("bigBox")){
+          $('.boxes').last().after($('.bigBox'));
+        } else {
+          $('#player' + ret).parent().before($('.bigBox'));
+        }
+      
+     
       //$('#player' + ele2).parent().removeClass("bigBox"); // removes the bigbox class
       //$('#player' + ele2).parent().addClass("boxes"); // restores the boxes class
 
