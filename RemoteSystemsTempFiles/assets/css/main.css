@@ -79,7 +79,7 @@ a:hover{
 }
 
 #main header{
-  
+
 }
 
 #logo {
@@ -195,6 +195,14 @@ button,
 	}
 
 
+}
+
+.container {
+  display: block;
+}
+
+.registerInput {
+  display: inline-block;
 }
 
 .search-container {
