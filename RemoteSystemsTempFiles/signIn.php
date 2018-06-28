@@ -16,34 +16,42 @@ session_start();
 <section id = "main">
 
 <header>
-<h1><a href = "home.html">Perspective</a></h1>
+<h1><a href = "home.php">Perspective</a></h1>
 </header>
+<?php
+  if(isset($_SESSION['u_id'])) {
+    echo '<form action = "assets/includes/logout-inc.php" method = "POST">
+      <button type = "submit" name = "submit">Log out</button>
+    </form>';
+  }
 
-<form action = "assets/includes/login-inc.php" method = "POST">
+  else {
+    echo '<form action = "assets/includes/login-inc.php" method = "POST">
 
-  <div id="search-container">
-    <label for="uname"><b>Username</b></label>
-    <input type="text" placeholder="Enter Username/e-mail" name="uname" required>
+      <div id="search-container">
+        <label for="uname"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username/e-mail" name="uname" required>
 
-	<br>
+    	<br>
 
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required>
 
-    <button type ="submit" name = "submit">Login</button>
-    <label>
-      <input type="checkbox" checked="checked" name="remember"> Remember me
-    </label>
-  </div>
+        <button type ="submit" name = "submit">Login</button>
+        <label>
+          <input type="checkbox" checked="checked" name="remember"> Remember me
+        </label>
+      </div>
 
-  <div id="search-container" style="background-color:#f1f1f1">
-    <a href = "home.html">Cancel</a>
-    <span class="psw">Forgot <a href="#">password?</a></span>
-  </div>
-</form>
+      <div id="search-container" style="background-color:#f1f1f1">
+        <a href = "home.php">Cancel</a>
+        <span class="psw">Forgot <a href="#">password?</a></span>
+      </div>
+    </form>';
+  }
 
-<p>Don't have an account? <a href = "signUp.php">Sign up</a></p>
-
+  //<p>Don't have an account? <a href = "signUp.php">Sign up</a></p>';
+?>
 </section>
 </body>
 

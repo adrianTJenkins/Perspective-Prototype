@@ -128,6 +128,11 @@ a:hover{
 
 }
 
+#submit {
+  position: relative;
+  margin-left: 50px;
+}
+
 #sub {
 	width: 10%;
 	height: 5%;

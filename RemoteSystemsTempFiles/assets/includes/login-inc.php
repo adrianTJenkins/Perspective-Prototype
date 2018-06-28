@@ -18,7 +18,7 @@ if(isset($_POST['submit'])) {
   }
 
   else {
-      $sql = "SELECT * FROM users WHERE user_name='$uname'";
+      $sql = "SELECT * FROM users WHERE user_name='$uname' OR user_email='$uname'";
       $result = mysqli_query($conn, $sql);
       $resultCheck = mysqli_num_rows($result);
       if($resultCheck < 1) {
@@ -38,7 +38,7 @@ if(isset($_POST['submit'])) {
             $_SESSION['u_id'] = $row['user_id'];
             $_SESSION['u_email'] = $row['user_email'];
             $_SESSION['u_name'] = $row['user_name'];
-            header("Location: ../../producer.html?login=success");
+            header("Location: ../../producer.php?login=success");
             exit();
           }
         }

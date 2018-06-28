@@ -7,7 +7,7 @@
 <body>
 
 <header>
-<h1><a href = "home.html">Perspective</a></h1>
+<h1><a href = "home.php">Perspective</a></h1>
 </header>
 
 <form action="assets/includes/signUp-inc.php" method = "POST">
@@ -41,7 +41,7 @@
     </label>
 
     <div class="clearfix">
-      <a href = "home.html">Cancel</a>
+      <a href = "home.php">Cancel</a>
       <button type="submit" name = "submit">Sign Up</button>
     </div>
   </div>
