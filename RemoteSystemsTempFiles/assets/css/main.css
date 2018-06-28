@@ -56,6 +56,13 @@ a:hover{
 	margin-top: -2.5em;
 }
 
+#adminLogout {
+	float: right;
+	text-align: right;
+	color: #B90504;
+	margin-top: -2.5em;
+}
+
 #keyword {
 	width: 75%;
 	height: 5%;

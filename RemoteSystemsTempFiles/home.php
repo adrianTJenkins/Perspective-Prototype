@@ -21,34 +21,14 @@ session_start();
 
             <?php
               if(isset($_SESSION['u_id'])) {
-                echo '<form action = "assets/includes/logout-inc.php" method = "POST">
-                  <button type = "submit" id = "submit" name = "submit">Log out</button>
+                echo $_SESSION['u_name'].'<form action = "assets/includes/logout-inc.php" method = "POST">
+                  <button type = "submit" id = "adminLogout" name = "submit">Log out</button>
                 </form>';
               }
 
               else {
-                echo '<form action = "assets/includes/login-inc.php" method = "POST">
-
-                  <div id="search-container">
-                    <label for="uname"><b>Username</b></label>
-                    <input type="text" placeholder="Enter Username/e-mail" name="uname" required>
-
-                	<br>
-
-                    <label for="psw"><b>Password</b></label>
-                    <input type="password" placeholder="Enter Password" name="psw" required>
-
-                    <button type ="submit" name = "submit">Login</button>
-                    <label>
-                      <input type="checkbox" checked="checked" name="remember"> Remember me
-                    </label>
-                  </div>
-
-                  <div id="search-container" style="background-color:#f1f1f1">
-                    <a href = "home.php">Cancel</a>
-                    <span class="psw">Forgot <a href="#">password?</a></span>
-                  </div>
-                </form>';
+                echo '
+                  <p id = "adminLogin">Are you a producing your own broadcast as an <strong>administrater</strong>? <a href = "signIn.php">Sign in</a><br>No account? <a href = "signUp.php">Sign up</a></p>';
               }
 
               //<p>Don't have an account? <a href = "signUp.php">Sign up</a></p>';
