@@ -18,15 +18,17 @@ session_start();
     			<h1><a href = "home.php">Perspective</a></h1>
             </header>
             </section>
-
+            <div id = "adminLogout">
             <?php
               if(isset($_SESSION['u_id'])) {
                 echo $_SESSION['u_name'].'<form action = "assets/includes/logout-inc.php" method = "POST">
-                  <button type = "submit" id = "adminLogout" name = "submit">Log out</button>
+                  <button type = "submit" name = "submit">Log out</button>
                 </form>';
               }
-
-              else {
+              ?>
+</div>
+<?php
+            if(!(isset($_SESSION['u_id']))) {
                 echo '
                   <p id = "adminLogin">Are you a producing your own broadcast as an <strong>administrater</strong>? <a href = "signIn.php">Sign in</a><br>No account? <a href = "signUp.php">Sign up</a></p>';
               }
