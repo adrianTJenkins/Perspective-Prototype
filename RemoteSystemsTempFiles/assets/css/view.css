@@ -13,6 +13,7 @@ h1, h2, h3, h4 {
 
 a{
   color: #B90504;
+  text-decoration: none;
 }
 
 h1 a {
@@ -32,11 +33,29 @@ a:hover{
 
 }
 
+#add {
+    background-color: #dddddd;
+    border: none;
+    color: white; !important
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
 #adminLogin {
 	float: right;
 	text-align: right;
 	color: #B90504;
 	margin-top: -2.5em;
+}
+
+#adminLogout {
+	float: right;
+	text-align: right;
+  font-weight: bold;
+	color: #B90504;
 }
 
 #keyword {
@@ -56,7 +75,7 @@ a:hover{
   font-size: 2em;
   margin-bottom: 0.25em;
   margin-left: 15px;
-  
+
 }
 
 #main header{
@@ -76,7 +95,7 @@ a:hover{
   font-family: 'Dosis', sans-serif;
   color: #333333;
   margin-top: -3.5vh;
-  
+
 }
 
 #homeSearch {
@@ -166,7 +185,7 @@ button,
 		text-decoration: none;
 		white-space: nowrap;
 	}
-	
+
 .camera {
 	position: relative;
 	right: 65px;

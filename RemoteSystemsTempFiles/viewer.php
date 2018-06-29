@@ -21,9 +21,9 @@
     			</form>
 
   			</div>
-        </header>
 
-        <p id = "adminLogin">Are you a producing your own broadcast as an <strong>administrater</strong>? <a href = "signIn.html">Sign in</a><br>Don't have an account? <a href = "signUp.html">Sign up</a></p>
+
+        </header>
 
     </section>
     <div id=playback>
@@ -71,59 +71,6 @@
             });
             var j = k+1;
            $('#player' + k).after('<button id = "cam' + k+'" class = "camera")">Camera ' + j+ '</button>');
-
-
-          /*$('#cam' +k).click(function() {
-
-
-             var ele = ($(this).attr('id').substring(3)); //This will remove bigPlayer from everything, then add it back to the one player
-
-				if($('.bigPlayer').length == 0) {
-          console.log($('.bigPlayer').length);
-					$('#player' + ele).addClass("bigPlayer");
-					$('#player' + ele).parent().addClass("bigBox");
-          $('.boxes').first().before($('.bigBox'));
-        } else {
-        	   if($('#player' + ele).hasClass("bigPlayer"))
-             {
-        		   var ret = parseInt(ele, 10);
-        		   ret += 1;
-        		   	console.log(ret);
-        		   	$('#player' + ret).parent().before($('.bigBox'));
-        		    $('#player' + ele).removeClass("bigPlayer");
-    		   		$('#player' + ele).parent().removeClass("bigBox");
-    		   		$('#player' + ele).parent().addClass("boxes");
-    		      } else {
-
-
-                console.log($('.bigPlayer').attr('id'))
-                var ele2 = ($('.bigPlayer').attr('id').substring(6));
-
-        	       $('.vid').removeClass("bigPlayer"); //removes (downsizes) everything
-
-                 $('#player' + ele).addClass("bigPlayer"); //adds (upsizes) the one player
-
-
-    		   var ret = parseInt(ele2, 10);
-    		   ret += 1;
-    		   console.log(ret);
-    		   	$('#player' + ret).parent().before($('.bigBox'));
-    		    //$('#player' + ele2).removeClass("bigPlayer");
-		   		$('#player' + ele2).parent().removeClass("bigBox");
-		   		$('#player' + ele2).parent().addClass("boxes");
-
-        	   $('.bigBox').addClass("boxes");
-
-        	   $('.vid').parent().removeClass("bigBox");
-
-        	   $('#player' + ele).parent().addClass("bigBox");
-
-        	   $('#player' + ele).parent().removeClass("boxes");
-
-        	   $('.boxes').first().before($('.bigBox'));
-        		   }
-				}
-      }); */
 		}
     bindCameraButtons();
     }

@@ -22,6 +22,7 @@ session_start();
             <?php
               if(isset($_SESSION['u_id'])) {
                 echo $_SESSION['u_name'].'<form action = "assets/includes/logout-inc.php" method = "POST">
+                  <a href = "producer.php">Producer Page</a><br>
                   <button type = "submit" name = "submit">Log out</button>
                 </form>';
               }
@@ -38,7 +39,7 @@ session_start();
 
             <div id = "homeSearch">
             <h3>Search for a live event.</h3>
-    			<form action = "viewer.html">
+    			<form action = "viewer.php">
       				<input id = "keyword" autofocus = "autofocus" type="text" onkeyup = "search()" placeholder="Enter keywords..." name = "q">
       				<button id = "sub" onclick = "" type="submit"><i class="fa fa-search"></i></button>
     			</form>

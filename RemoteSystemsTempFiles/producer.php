@@ -14,56 +14,29 @@ session_start();
 <body>
     <section id="main">
         <header>
-        	<script src="search.js" type="text/javascript"></script>
+        	<script src="assets/js/search.js" type="text/javascript"></script>
     			<script src="https://apis.google.com/js/client.js?onload=onClientLoad" type="text/javascript"></script>
             <h1><a href ="home.php">Perspective</a></h1>
 
         	<div id="search-container">
-    			<form>
-      				<input id = "keyword" type="text" onkeyup = "search()" placeholder="Enter keywords..." name = "q">
+    			<form onsubmit = "search()">
+      				<input id = "keyword" type="text" placeholder="Enter keywords..." name = "q">
       				<button type="submit"><i class="fa fa-search"></i></button>
     			</form>
 
   			</div>
 
-
+        <div id = "adminLogout">
         <?php
           if(isset($_SESSION['u_id'])) {
-            echo '<form action = "assets/includes/logout-inc.php" method = "POST">
+            echo $_SESSION['u_name'].'<form action = "assets/includes/logout-inc.php" method = "POST">
               <button type = "submit" name = "submit">Log out</button>
             </form>';
           }
-
-          else {
-            echo '<form action = "assets/includes/login-inc.php" method = "POST">
-
-              <div id="search-container">
-                <label for="uname"><b>Username</b></label>
-                <input type="text" placeholder="Enter Username/e-mail" name="uname" required>
-
-            	<br>
-
-                <label for="psw"><b>Password</b></label>
-                <input type="password" placeholder="Enter Password" name="psw" required>
-
-                <button type ="submit" name = "submit">Login</button>
-                <label>
-                  <input type="checkbox" checked="checked" name="remember"> Remember me
-                </label>
-              </div>
-
-              <div id="search-container" style="background-color:#f1f1f1">
-                <a href = "home.php">Cancel</a>
-                <span class="psw">Forgot <a href="#">password?</a></span>
-              </div>
-            </form>';
-          }
-
-          //<p>Don't have an account? <a href = "signUp.php">Sign up</a></p>';
         ?>
+</header>
+</div>
 
-
-        </header>
     </section>
     <div id=playback>
         <section id="videos">
@@ -92,33 +65,33 @@ session_start();
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/player.js"></script>
 
-	<video id = "bigPlayer" controls style="width:640px;height:360px;"></video>
-    <script>
-	var youtubeSearch = null;
-    function searchCompleted(response) {
-		youtubeSearch = response;
-		for (var k=0; k<youtubeSearch.items.length; k++)
-		{
-			$('#videos').append('<div class="vid" id="player' + k+ '"> </div>');
-            var player = new YT.Player('player' + k, {
-                height: '60px',
-                width: '90px',
-                videoId: youtubeSearch.items[k].id.videoId,
-                events: {
-                    'onReady': onPlayerReady,
-                }
-            });
-            var j = k+1;
-           $('#videos').append('<button class = "camera" onclick = "feedId("#player '+k+'")">Camera ' + j+ '</button>');
-		}
-    }
-    </script>
+<!--
+  <video id = "bigPlayer" controls style="width:640px;height:360px;"></video>
+-->
+  <script>
 
-    <?php
-      if(isset($_SESSION['u_id'])) {
-        echo "You are logged in";
-      }
-    ?>
+var youtubeSearch = null;
+  function searchCompleted(response) {
+  youtubeSearch = response;
+  for (var k=0; k<youtubeSearch.items.length; k++)
+  {
+    $('#videos').append('<div class = "boxes"><div class="vid" id="player' + k+ '"> </div></div>');
+          var player = new YT.Player('player' + k, {
+              height: '60px',
+              width: '90px',
+              videoId: youtubeSearch.items[k].id.videoId,
+              events: {
+                  'onReady': onPlayerReady,
+              }
+          });
+          var j = k+1;
+         $('#player' + k).after('<button id = "cam' + k+'" class = "camera")">Camera ' + j+ '</button>');
+  }
+  bindCameraButtons();
+  }
+  </script>
+
+<button type ="submit" id = "add" name = "add">Add to Event</button>
 
 </body>
 </html>
