@@ -54,9 +54,3 @@ function getId(request) {
 function onSearchResponse(response) {
     showResponse(response);
 }
-
-// Feeds the VideoId to the Big Video Player
-function feedId(num) {
-	$('#bigPlayer').attr('src', $(num).attr('src'));
-}
-

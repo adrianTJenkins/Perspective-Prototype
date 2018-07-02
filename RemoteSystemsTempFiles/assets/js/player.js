@@ -38,8 +38,8 @@ $('button[id^="cam"]').click(function(){
         } else {
           $('#player' + ret).parent().before($('.bigBox'));
         }
-      
-     
+
+
       //$('#player' + ele2).parent().removeClass("bigBox"); // removes the bigbox class
       //$('#player' + ele2).parent().addClass("boxes"); // restores the boxes class
 
@@ -51,4 +51,14 @@ $('button[id^="cam"]').click(function(){
     }
   }
 });
+}
+
+function findBigNum() {
+  return ($('.bigPlayer').attr('id').substring(6));
+}
+
+// Feeds the VideoId to the Big Video Player
+function feedId() {
+  var num = findBigNum();
+	return $('#player'+num).attr('src').substring(30,41);
 }

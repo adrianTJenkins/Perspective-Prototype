@@ -91,7 +91,5 @@ var youtubeSearch = null;
   }
   </script>
 
-<button type ="submit" id = "add" name = "add">Add to Event</button>
-
 </body>
 </html>

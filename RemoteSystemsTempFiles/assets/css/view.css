@@ -63,7 +63,7 @@ a:hover{
 	height: 5%;
 	min-height: 40px;
 	border-style: solid;
-  	border-color: #990100;
+  	border-color: #B90504;
   	border-radius: 15px;
   	padding: 2px 5px;
   	text-algin: center;
@@ -197,6 +197,16 @@ button,
   font-size: 17px;
   padding-left: 200px;
   margin-left: 300px;
+}
+
+#vidPlayer {
+  width: 50%;
+  position: relative;
+  text-align: center;
+  left: 300px;
+  margin-top: 50px;
+  border: solid;
+  border-color: #B90504;
 }
 
 .bigPlayer {

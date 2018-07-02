@@ -26,6 +26,12 @@
         </header>
 
     </section>
+
+    <video id = "vidPlayer" width="999" height="500" controls>
+  <source src="feedId()" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+    <!--
     <div id=playback>
         <section id="videos">
 
@@ -49,7 +55,7 @@
             </script>
         </section>
     </div>
-    <!-- Scripts -->
+    <!-- Scripts
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/player.js"></script>
 
@@ -75,5 +81,6 @@
     bindCameraButtons();
     }
     </script>
+-->
 </body>
 </html>
