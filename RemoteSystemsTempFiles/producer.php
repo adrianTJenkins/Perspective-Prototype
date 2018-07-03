@@ -1,4 +1,7 @@
 <?php
+
+include 'dbh-inc.php';
+
 session_start();
  ?>
 
@@ -9,6 +12,7 @@ session_start();
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Anaheim|Dosis" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/view.css">
+    <script src = "assets/js/jquery.min.js"></script>
 </head>
 
 <body>
@@ -85,9 +89,14 @@ var youtubeSearch = null;
               }
           });
           var j = k+1;
-         $('#player' + k).after('<button id = "cam' + k+'" class = "camera")">Camera ' + j+ '</button>');
+
+         $('#player' + k).after('<button id = "cam' + k+'" class = "camera" onclick = "ajax_post()")">Camera ' + j+ '</button>');
+
   }
   bindCameraButtons();
+  checkPlayers();
+
+
   }
   </script>
 

@@ -62,3 +62,40 @@ function feedId() {
   var num = findBigNum();
 	return $('#player'+num).attr('src').substring(30,41);
 }
+
+function ajax_post() {
+
+}
+
+function checkPlayers (){
+
+ console.log("Checking Videos...");
+ for(var i = 0; i < $('.vid').length; i++){
+   verifyLive(i);
+   //console.log("Checking " + i);
+ }
+}
+
+function verifyLive (num) {
+
+ var q = $('#player' + num).attr('src').substring(30,41); // GEts the video ID from the src URL of the iframe
+ //console.log("verifying");
+ var request = gapi.client.youtube.videos.list({
+   id: q,
+   //part: 'status' // for testing status loop
+   part: 'snippet' //used to retrieve liveBroadcastContent
+ }).then(function(response) {
+   var str = response.result.items[0].snippet.liveBroadcastContent;
+   var status = false; // initially false set to true if the video is live
+
+   if(str == "live"){status = true;}
+
+   //var status = response.result.items[0].status.embeddable; // For testing only
+
+   if(!status){
+     console.log(num + " is " + status);
+
+     $('#cam'+ num).prop('disabled',true);
+   }
+
+ });
