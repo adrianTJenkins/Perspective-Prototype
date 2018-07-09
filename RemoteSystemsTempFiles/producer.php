@@ -1,6 +1,6 @@
 <?php
 
-include 'dbh-inc.php';
+include 'assets/includes/dbh-inc.php';
 
 session_start();
  ?>
@@ -90,11 +90,11 @@ var youtubeSearch = null;
           });
           var j = k+1;
 
-         $('#player' + k).after('<button id = "cam' + k+'" class = "camera" onclick = "ajax_post()")">Camera ' + j+ '</button>');
+         $('#player' + k).after('<button id = "cam' + k+'" class = "camera")">Camera ' + j+ '</button>');
 
   }
   bindCameraButtons();
-  checkPlayers();
+  //checkPlayers();
 
 
   }
