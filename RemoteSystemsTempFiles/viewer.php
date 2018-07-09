@@ -31,7 +31,7 @@
 
 
 
-    <iframe id = "vidPlayer" width="999" height="500" controls src = "">
+    <iframe id = "vidPlayer" src = "">
 
 Your browser does not support the video tag.
 </iframe>

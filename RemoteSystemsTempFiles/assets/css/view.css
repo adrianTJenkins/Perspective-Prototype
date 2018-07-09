@@ -143,8 +143,6 @@ iframe {
   margin-top: 1.5em;
   margin-right: 1.5em;
   margin-bottom: 0.5em;
-  width: 120px;
-  height: 80px;
 }
 
 
@@ -200,7 +198,8 @@ button,
 }
 
 #vidPlayer {
-  width: 50%;
+  width: 55%;
+  height: 500px;
   position: relative;
   text-align: center;
   left: 300px;
