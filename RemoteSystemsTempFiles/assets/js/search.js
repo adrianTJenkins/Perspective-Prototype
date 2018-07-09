@@ -38,6 +38,7 @@ function search() {
         part: 'id',
         q: getParameterByName('q'),
         eventType: 'live',
+        videoEmbeddable: true,
         type: 'video',
 		maxResults: '10'
     });

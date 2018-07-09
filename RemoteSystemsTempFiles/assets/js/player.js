@@ -1,5 +1,7 @@
 function bindCameraButtons() {
 
+setInterval(checkPlayers, 3000);
+
 $('button[id^="cam"]').click(function(){
 
   console.log("button clicked!")
@@ -10,6 +12,9 @@ $('button[id^="cam"]').click(function(){
     $('#player' + ele).addClass("bigPlayer");
     $('#player' + ele).parent().addClass("bigBox");
     $('.boxes').first().before($('.bigBox'));
+    //code to feed Id to database
+    console.log(feedId());
+    var a = feedId();
   } else {
     if($('#player' + ele).hasClass("bigPlayer"))
     {
@@ -32,7 +37,8 @@ $('button[id^="cam"]').click(function(){
       var ret = parseInt(ele2, 10); // converts the substring number to an integer
       ret += 1; // adds one to the players position to represent the player it precedes
       console.log(ret);
-
+      console.log(feedId());
+      a = feedId();
       if($('#player9').parent().hasClass("bigBox")){
           $('.boxes').last().after($('.bigBox'));
         } else {
