@@ -94,7 +94,7 @@ var youtubeSearch = null;
 
   }
   bindCameraButtons();
-  //checkPlayers();
+  checkPlayers();
 
 
   }

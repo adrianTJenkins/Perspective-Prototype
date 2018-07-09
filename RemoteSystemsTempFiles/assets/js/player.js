@@ -98,4 +98,5 @@ function verifyLive (num) {
      $('#cam'+ num).prop('disabled',true);
    }
 
- };
+ });
+}
