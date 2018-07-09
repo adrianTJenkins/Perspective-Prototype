@@ -56,6 +56,7 @@ $('button[id^="cam"]').click(function(){
       $('.boxes').first().before($('.bigBox')); //Moves the bigBox before the first box
     }
   }
+updatePriorityID(feedId());
 });
 }
 
@@ -66,7 +67,8 @@ function findBigNum() {
 // Feeds the VideoId to the Big Video Player
 function feedId() {
   var num = findBigNum();
-	return $('#player'+num).attr('src').substring(30,41);
+  //console.log($('#player'+num).attr('src'));
+	return "https://www.youtube.com/watch?v=" + $('#player'+num).attr('src').substring(30,41);
 }
 
 function ajax_post() {

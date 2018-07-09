@@ -13,6 +13,7 @@ session_start();
     <link href="https://fonts.googleapis.com/css?family=Anaheim|Dosis" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/view.css">
     <script src = "assets/js/jquery.min.js"></script>
+    <script src = "assets/js/comm.js"></script>
 </head>
 
 <body>
