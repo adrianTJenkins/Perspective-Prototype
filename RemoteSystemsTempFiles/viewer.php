@@ -38,6 +38,7 @@ Your browser does not support the video tag.
 
 <script>
   readPriorityID();
+  setInterval(readPriorityID, 1000);
 </script>
 
 </body>

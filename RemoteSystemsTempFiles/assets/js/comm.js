@@ -17,8 +17,13 @@ function readPriorityID() {
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
+          if(this.responseText.substring(30,41) != document.getElementById('vidPlayer').src.substring(30,41)){
             document.getElementById('vidPlayer').src = this.responseText;
         }
+        else {
+
+        }
+      }
     };
     xmlhttp.open("GET", "assets/php/videoID.php", true);
     xmlhttp.send();
