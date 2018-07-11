@@ -39,9 +39,10 @@ session_start();
 
             <div id = "homeSearch">
             <h3>Search for a live event.</h3>
-    			<form action = "viewer.php">
+    			<form action = "multi.php">
       				<input id = "keyword" autofocus = "autofocus" type="text" onkeyup = "search()" placeholder="Find broadcasts..." name = "q">
       				<button id = "sub" onclick = "" type="submit"><i class="fa fa-search"></i></button>
+              <a href = "viewer.php">Single View Page</a><br>
     			</form>
 
   			</div>
