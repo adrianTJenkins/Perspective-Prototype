@@ -1,0 +1,223 @@
+/*
+  Color Pallette: http://www.colourlovers.com/palette/623761/Walking_Away
+  Light Grey: #F6F6F6
+  Mid Grey:   #E8E8E8
+  Dark Grey:  #333333
+  Dark Red:   #990100
+  Red:        #B90504
+
+  Body Text: Dark Grey
+  Headings: Dark Red
+  Accents,Icons,Structural,Links: Red
+
+  Fonts: GoogleFonts
+    Headings: Anaheim
+    Body: Dosis
+
+*/
+
+body {
+
+  font-family: 'Dosis', sans-serif;
+
+}
+
+
+h1, h2, h3, h4 {
+  font-family: 'Anaheim', sans-serif;
+
+}
+
+a{
+  color: #B90504;
+}
+
+h1 a {
+	text-decoration: none;
+	font-family: 'Anaheim', sans-serif;
+	letter-spacing: 0.075em;
+}
+
+a.active {
+
+color: #E8E8E8;
+
+}
+
+a:hover{
+
+
+}
+
+#adminLogin {
+	float: right;
+	text-align: right;
+	color: #B90504;
+	margin-top: -2.5em;
+}
+
+#adminLogout {
+	float: right;
+	text-align: right;
+  font-weight: bold;
+	color: #B90504;
+}
+
+#keyword {
+	width: 75%;
+	height: 5%;
+	min-height: 40px;
+	border-style: solid;
+  	border-color: #B90504;
+  	border-radius: 15px;
+  	padding: 2px 5px;
+  	padding-right: 70px;
+}
+
+#main header h1{
+  color: #B90504;
+  font-size: 2em;
+  margin-bottom: 0.25em;
+
+}
+
+#logIn {
+	margin-left: 15px;
+}
+
+#main header{
+
+}
+
+#logo {
+  position: absolute;
+  color: #B90504;
+  font-size: 7em;
+  margin-left: -1.2em;
+  display:none;
+}
+
+@media (min-width:1200px){
+  #logo {
+    display: inline-block;
+
+  }
+}
+
+
+#main {
+  margin-left: 2vw;
+  min-width: 800px;
+  max-width: 900px;
+  font-family: 'Dosis', sans-serif;
+  color: #333333;
+}
+
+#homeSearch {
+  font-size: 17px;
+  position: relative;
+  margin: auto;
+  width: 50%;
+  top: 30vh;
+  text-align: center;
+}
+
+#homeSearch h3 {
+	font-size: 35px;
+	color: #B90504;
+}
+
+#playback{
+  min-width: 800px;
+  max-width: 900px;
+  margin: auto;
+
+
+}
+
+#submit {
+  position: relative;
+  margin-left: 50px;
+}
+
+#sub {
+	width: 10%;
+	height: 5%;
+}
+
+#videos {
+  min-width: 600px;
+  max-width: 650px;
+  float:left;
+
+}
+
+#controls {
+  min-width: 200px;
+  max-width: 250px;
+  float: right;
+
+}
+
+iframe {
+  border: 2px solid #990100;
+  margin-top: .5em;
+  margin-right: .5em;
+  width: 300px;
+  height: 200px;
+}
+
+
+
+#controls .buttons {
+  float:right;
+  display:block;
+  padding-left:3em;
+
+
+}
+
+#home {
+	margin: auto 0px;
+}
+
+input[type="button"],
+button,
+.button{
+
+		background-color: transparent;
+		border: none;
+		color: #B90504 !important;
+		cursor: pointer;
+		display: inline-block;
+		font-family: "Anaheim", sans-serif;
+		font-size: 0.8em;
+		font-weight: 700;
+		height: 3.5em;
+    width: 140px;
+		letter-spacing: 0.075em;
+		line-height: 3.5em;
+		padding: 0 auto;
+    margin-top: .5em;
+    margin-bottom: .5em;
+    margin-left: -70px;
+    text-align: center;
+		text-decoration: none;
+		white-space: nowrap;
+	}
+
+
+}
+
+.container {
+  display: block;
+}
+
+.registerInput {
+  display: inline-block;
+}
+
+.search-container {
+  border: none;
+  font-size: 17px;
+}
