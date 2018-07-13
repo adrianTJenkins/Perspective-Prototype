@@ -1,8 +1,8 @@
 <?php
 
-include 'assets/includes/dbh-inc.php';
+//include 'assets/includes/dbh-inc.php';
 
-session_start();
+//session_start();
  ?>
 
 <!DOCTYPE html>
@@ -21,7 +21,7 @@ session_start();
         <header>
         	<script src="assets/js/search.js" type="text/javascript"></script>
     			<script src="https://apis.google.com/js/client.js?onload=onClientLoad" type="text/javascript"></script>
-            <h1><a href ="home.php">Perspective</a></h1>
+            <h1><a href ="index.html">Perspective</a></h1>
 
         	<div id="search-container">
     			<form onsubmit = "search()">
@@ -82,8 +82,13 @@ var youtubeSearch = null;
   {
     $('#videos').append('<div class = "boxes"><div class="vid" id="player' + k+ '"> </div></div>');
           var player = new YT.Player('player' + k, {
+<<<<<<< HEAD
               height: '120px',
               width: '180px',
+=======
+              height: '240px',
+              width: '360px',
+>>>>>>> Live
               videoId: youtubeSearch.items[k].id.videoId,
               events: {
                   'onReady': onPlayerReady,

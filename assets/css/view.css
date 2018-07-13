@@ -48,7 +48,8 @@ a:hover{
 	float: right;
 	text-align: right;
 	color: #B90504;
-	margin-top: -2.5em;
+	margin-top: -4em;
+  padding-right: 1.5em;
 }
 
 #adminLogout {
@@ -70,9 +71,17 @@ a:hover{
   	margin: auto;
 }
 
+#main {
+  min-width: 800px;
+  font-family: 'Dosis', sans-serif;
+  color: #333333;
+  margin-top: -3.5vh;
+
+}
+
 #main header h1{
   color: #990100;
-  font-size: 2em;
+  font-size: 32px;
   margin-bottom: 0.25em;
   margin-left: 15px;
 
@@ -80,7 +89,15 @@ a:hover{
 
 #main header{
 	background-color: #ffffff;
-	background-size: 100% 20%;
+	background-size: 110% 40%;
+  padding-top: 2em;
+  padding-bottom: 2em;
+
+}
+
+#content {
+  padding: 1em;
+
 }
 
 @media (min-width:1200px){
@@ -90,11 +107,10 @@ a:hover{
 }
 
 
-#main {
-  min-width: 800px;
-  font-family: 'Dosis', sans-serif;
-  color: #333333;
-  margin-top: -3.5vh;
+
+
+#view-options li{
+  margin-bottom: 10px;
 
 }
 
@@ -114,9 +130,8 @@ a:hover{
 
 #playback{
   min-width: 800px;
-  max-width: 900px;
+  max-width: 1400px;
   margin: auto;
-
 
 }
 
@@ -127,8 +142,9 @@ a:hover{
 
 #videos {
   min-width: 90px;
-  max-width: 1280px;
-  float:left;
+  max-width: 80vw; /*1150*/
+  /*float:left;*/
+  margin: auto;
 }
 
 #controls {
@@ -141,7 +157,7 @@ a:hover{
 iframe {
   border: none;
   margin-top: 1.5em;
-  margin-right: 1.5em;
+  /*margin-right: 1em;*/
   margin-bottom: 0.5em;
 }
 
@@ -150,7 +166,7 @@ iframe {
 #controls .buttons {
   float:right;
   display:block;
-  padding-left:3em;
+  padding-left: 1em;
 
 
 }
@@ -172,7 +188,6 @@ button,
 		font-size: 0.8em;
 		font-weight: 700;
 		height: 3.5em;
-    width: 140px;
 		letter-spacing: 0.075em;
 		line-height: 3.5em;
 		padding: 0 auto;
@@ -186,7 +201,7 @@ button,
 
 .camera {
 	position: relative;
-	right: 65px;
+	right: 25px;
 	top: 5px;
 }
 
@@ -195,6 +210,11 @@ button,
   font-size: 17px;
   padding-left: 200px;
   margin-left: 300px;
+}
+
+#search-container button, .button{
+  width: 140px;
+
 }
 
 #vidPlayer {
@@ -219,8 +239,13 @@ button,
 
 .boxes {
 	width: 400px;
+<<<<<<< HEAD
 	height: 400px;
 	margin: 5px 5px;
+=======
+	height: 140px;
+	margin: 5px 15px;
+>>>>>>> Live
 	display: inline;
 	position: relative;
 }
