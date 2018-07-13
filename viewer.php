@@ -13,15 +13,15 @@
         <header>
         	<script src="assets/js/search.js" type="text/javascript"></script>
     			<script src="https://apis.google.com/js/client.js?onload=onClientLoad" type="text/javascript"></script>
-            <h1><a href = "home.php">Perspective</a></h1><!-- Perspective Header -->
+            <h1><a href = "index.html">Perspective</a></h1><!-- Perspective Header -->
 
-        	<div id="search-container">
+        	<!--<div id="search-container">
     			<form>
       				<input id = "keyword" type="text"  placeholder="Enter keywords..." name = "q">
       				<button type="submit"><i class="fa fa-search"></i></button>
     			</form>
 
-  			</div>
+  			</div> -->
 
         </header>
 
@@ -38,7 +38,7 @@ Your browser does not support the video tag.
 
 <script>
   readPriorityID();
-  setInterval(readPriorityID, 1);
+  setInterval(readPriorityID, 2000);
 </script>
 
 </body>

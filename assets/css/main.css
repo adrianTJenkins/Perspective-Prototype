@@ -86,7 +86,8 @@ a:hover{
 }
 
 #main header{
-
+  background-color: #ffffff;
+  background-size: 100% 20%;
 }
 
 #logo {
