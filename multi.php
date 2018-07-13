@@ -82,8 +82,8 @@ var youtubeSearch = null;
   {
     $('#videos').append('<div class = "boxes"><div class="vid" id="player' + k+ '"> </div></div>');
           var player = new YT.Player('player' + k, {
-              height: '60px',
-              width: '90px',
+              height: '120px',
+              width: '180px',
               videoId: youtubeSearch.items[k].id.videoId,
               events: {
                   'onReady': onPlayerReady,

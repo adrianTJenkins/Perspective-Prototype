@@ -7,7 +7,6 @@ session_start();
 
 <!DOCTYPE html>
 <html>
-
 <head>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Anaheim|Dosis" rel="stylesheet">
@@ -70,9 +69,6 @@ session_start();
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/player.js"></script>
 
-<!--
-  <video id = "bigPlayer" controls style="width:640px;height:360px;"></video>
--->
   <script>
 
 var youtubeSearch = null;
