@@ -32,7 +32,7 @@
 
     <section id="broadcast">
     <iframe id = "vidPlayer" src = ""></iframe>
-    <div id="overVid" class="overlay"><a href="#">Some amazing mysterious text</a></div>
+    <div id="overVid" class="overlay"><a href="#">Player Controls</a></div>
     <div class="Video Title"><h2>Video Title</h2></div>
     <div class="producerInfo"><h3>Produced by: <a href="#">justpac</a></h3></div>
     <div class="streamerInfo"><h3>Streamed by: <a href="#">Adrian Jenkins</a></h3></div>

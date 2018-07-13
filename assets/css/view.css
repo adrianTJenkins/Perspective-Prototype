@@ -223,32 +223,45 @@ button,
   position: relative;
 }
 
-#overVid{
-  width: 60vw;
-  height: calc(60vw * .5625 - 1px);
-  display: block;
 
-}
 
 .overlay{
   position: absolute;
+  height: 240px;
+  width: 360px;
   top: 0;
+  left: 0;
   z-index: 1;
-  margin-top: 1.5em;
+  margin-top: -232px;
   color: none;
   opacity: 0;
-  text-align:center;
+  background-color: #F00;
+  text-align: center;
+  display: block;
 }
 
 .overlay a{
   color: #FFF;
-  line-height: calc(60vw * .5625 - 1px);
+  line-height: 240px;
 }
 
 .overlay:hover{
   background: rgba(0,0,0,.4);
   opacity: 1.0;
   color: #FFF;
+}
+
+#overVid{
+  width: 60vw;
+  height: calc(60vw * .5625 - 1px);
+  display: block;
+  margin-top: 25px;
+}
+
+#overVid a{
+  color: #FFF;
+  line-height: calc(60vw * .5625);
+
 }
 
 #vidPlayer {

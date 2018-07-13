@@ -91,7 +91,9 @@ var youtubeSearch = null;
           });
           var j = k+1;
 
-         $('#player' + k).after('<button id = "cam' + k+'" class = "camera")">Camera ' + j+ '</button>');
+         //$('#player' + k).after('<button id = "cam' + k+'" class = "camera")">Camera ' + j+ '</button>');
+         $('#player' + k).after('<div id = "ovr' + k+'" class = "overlay")"><a href="#">Switch to video ' + j+ '</a></div>'); //overlay div
+
 
   }
   bindCameraButtons();
