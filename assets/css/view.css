@@ -217,15 +217,49 @@ button,
 
 }
 
+#broadcast {
+  width: 60%;
+  margin: auto;
+  position: relative;
+}
+
+#overVid{
+  width: 60vw;
+  height: calc(60vw * .5625 - 1px);
+  display: block;
+
+}
+
+.overlay{
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  margin-top: 1.5em;
+  color: none;
+  opacity: 0;
+  text-align:center;
+}
+
+.overlay a{
+  color: #FFF;
+  line-height: calc(60vw * .5625 - 1px);
+}
+
+.overlay:hover{
+  background: rgba(0,0,0,.4);
+  opacity: 1.0;
+  color: #FFF;
+}
+
 #vidPlayer {
-  width: 55%;
-  height: 500px;
+  width: 100%;
+  height: calc(60vw * .5625);
   position: relative;
   text-align: center;
-  left: 300px;
+  /*left: 300px;
   margin-top: 50px;
   border: solid;
-  border-color: #B90504;
+  border-color: #B90504;*/
 }
 
 .bigPlayer {
@@ -239,13 +273,8 @@ button,
 
 .boxes {
 	width: 400px;
-<<<<<<< HEAD
-	height: 400px;
-	margin: 5px 5px;
-=======
 	height: 140px;
 	margin: 5px 15px;
->>>>>>> Live
 	display: inline;
 	position: relative;
 }
