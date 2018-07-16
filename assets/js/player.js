@@ -104,7 +104,7 @@ function verifyLive (num) {
    if(!status){
      console.log(num + " is " + status);
 
-     $('#cam'+ num).prop('disabled',true);
+     $('#ovr'+ num).prop('disabled',true);
    }
 
  });

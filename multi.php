@@ -82,13 +82,9 @@ var youtubeSearch = null;
   {
     $('#videos').append('<div class = "boxes"><div class="vid" id="player' + k+ '"> </div></div>');
           var player = new YT.Player('player' + k, {
-<<<<<<< HEAD
-              height: '120px',
-              width: '180px',
-=======
+
               height: '240px',
               width: '360px',
->>>>>>> Live
               videoId: youtubeSearch.items[k].id.videoId,
               events: {
                   'onReady': onPlayerReady,
@@ -96,7 +92,9 @@ var youtubeSearch = null;
           });
           var j = k+1;
 
-         $('#player' + k).after('<button id = "cam' + k+'" class = "camera")">Camera ' + j+ '</button>');
+         //$('#player' + k).after('<button id = "cam' + k+'" class = "camera")">Camera ' + j+ '</button>');
+         $('#player' + k).after('<div id = "ovr' + k+'" class = "overlay")"><a href="#">Switch to video ' + j+ '</a></div>'); //overlay div
+
 
   }
   bindCameraButtons();
