@@ -2,7 +2,8 @@ function bindCameraButtons() {
 
 setInterval(checkPlayers, 3000);
 
-$('button[id^="cam"]').click(function(){
+//$('button[id^="cam"]').click(function(){
+$('div[id^="ovr"]').click(function(){
 
   console.log("button clicked!")
   var ele = ($(this).attr('id').substring(3)); // This will remove bigPlayer from everything, then add it back to the one player
@@ -105,7 +106,7 @@ function verifyLive (num) {
    if(!status){
      console.log(num + " is " + status);
 
-     $('#cam'+ num).prop('disabled',true);
+     $('#ovr'+ num).prop('disabled',true);
    }
 
  });

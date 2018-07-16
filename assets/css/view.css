@@ -92,7 +92,7 @@ a:hover{
 	background-size: 110% 40%;
   padding-top: 2em;
   padding-bottom: 2em;
-
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 #content {
@@ -217,15 +217,62 @@ button,
 
 }
 
+#broadcast {
+  width: 60%;
+  margin: auto;
+  position: relative;
+}
+
+
+
+.overlay{
+  position: absolute;
+  height: 240px;
+  width: 360px;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  margin-top: -232px;
+  color: none;
+  opacity: 0;
+  background-color: #F00;
+  text-align: center;
+  display: block;
+}
+
+.overlay a{
+  color: #FFF;
+  line-height: 240px;
+}
+
+.overlay:hover{
+  background: rgba(0,0,0,.4);
+  opacity: 1.0;
+  color: #FFF;
+}
+
+#overVid{
+  width: 60vw;
+  height: calc(60vw * .5625 - 1px);
+  display: block;
+  margin-top: 25px;
+}
+
+#overVid a{
+  color: #FFF;
+  line-height: calc(60vw * .5625);
+
+}
+
 #vidPlayer {
-  width: 55%;
-  height: 500px;
+  width: 100%;
+  height: calc(60vw * .5625);
   position: relative;
   text-align: center;
-  left: 300px;
+  /*left: 300px;
   margin-top: 50px;
   border: solid;
-  border-color: #B90504;
+  border-color: #B90504;*/
 }
 
 .bigPlayer {
@@ -238,8 +285,8 @@ button,
 
 .boxes {
 	width: 400px;
-	height: 400px;
-	margin: 30px 30px;
+	height: 140px;
+	margin: 5px 15px;
 	display: inline;
 	position: relative;
 }
