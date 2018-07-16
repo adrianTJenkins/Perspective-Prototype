@@ -230,7 +230,6 @@ button,
 
 .bigPlayer {
   border: none;
-  margin-bottom: 25px;
   width: 600px;
   height: 400px;
   position: relative;
@@ -239,13 +238,8 @@ button,
 
 .boxes {
 	width: 400px;
-<<<<<<< HEAD
 	height: 400px;
-	margin: 5px 5px;
-=======
-	height: 140px;
-	margin: 5px 15px;
->>>>>>> Live
+	margin: 30px 30px;
 	display: inline;
 	position: relative;
 }
@@ -257,4 +251,17 @@ button,
 	height: 500px;
 	margin: 0 auto;
 	display: block;
+}
+
+#spaceblock {
+    background-color : white;
+    border: none;
+    width: 600px;
+    height: 400px;
+    position: relative;
+    text-align: center;
+    margin-left: 420px;
+}
+#wrapper {
+    padding : 10px;
 }
