@@ -43,6 +43,13 @@
 </div>
 
     </section>
+
+      <div id='wrapper'>
+    <div id='spaceblock'></div>
+    <div contenteditable='true' id='edit'>
+    </div>
+</div>
+
     <div id=playback>
         <section id="videos">
 

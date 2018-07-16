@@ -277,7 +277,6 @@ button,
 
 .bigPlayer {
   border: none;
-  margin-bottom: 25px;
   width: 600px;
   height: 400px;
   position: relative;
@@ -299,4 +298,17 @@ button,
 	height: 500px;
 	margin: 0 auto;
 	display: block;
+}
+
+#spaceblock {
+    background-color : white;
+    border: none;
+    width: 600px;
+    height: 400px;
+    position: relative;
+    text-align: center;
+    margin-left: 420px;
+}
+#wrapper {
+    padding : 10px;
 }

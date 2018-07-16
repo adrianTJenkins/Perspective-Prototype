@@ -10,6 +10,7 @@ $('div[id^="ovr"]').click(function(){
 
   if($('.bigPlayer').length == 0) {
   console.log($('.bigPlayer').length);
+    $('#spaceblock').css("position", "absolute");
     $('#player' + ele).addClass("bigPlayer");
     $('#player' + ele).parent().addClass("bigBox");
     $('.boxes').first().before($('.bigBox'));
@@ -22,6 +23,7 @@ $('div[id^="ovr"]').click(function(){
       var ret = parseInt(ele, 10);
       ret += 1;
       console.log(ret);
+      $('#spaceblock').css("position", "relative");
       $('#player' + ret).parent().before($('.bigBox'));
       $('#player' + ele).removeClass("bigPlayer");
       $('#player' + ele).parent().removeClass("bigBox");
