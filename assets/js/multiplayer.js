@@ -2,10 +2,15 @@ function bindCameraButtons() {
 
 setInterval(checkPlayers, 3000);
 
-$('button[id^="cam"]').click(function(){
+  //$('button[id^="cam"]').click(function(){
+  $('div[id^="ovr"]').click(function(){
 
-  console.log("button clicked!")
-  var ele = ($(this).attr('id').substring(3)); // This will remove bigPlayer from everything, then add it back to the one player
+    console.log("button clicked!")
+    var ele = ($(this).attr('id').substring(3)); // This will remove bigPlayer from everything, then add it back to the one player
+
+    $('div[id^="ovr"]').removeClass("bigOverlay");
+    $(this).addClass("bigOverlay");
+
 
   if($('.bigPlayer').length == 0) {
   console.log($('.bigPlayer').length);

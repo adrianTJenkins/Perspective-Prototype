@@ -251,6 +251,11 @@ button,
   color: #FFF;
 }
 
+.bigOverlay{
+  display: none;
+
+}
+
 #overVid{
   width: 60vw;
   height: calc(60vw * .5625 - 1px);
@@ -308,6 +313,7 @@ button,
     position: relative;
     text-align: center;
     margin-left: 420px;
+    display: none;
 }
 #wrapper {
     padding : 10px;
