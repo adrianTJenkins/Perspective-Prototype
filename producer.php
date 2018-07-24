@@ -103,6 +103,9 @@ var youtubeSearch = null;
 
 
   }
+  if(youtubeSearch.items.length < 1){
+    $('#videos').append('<h3>No Videos Found</h3>');
+  }
   bindCameraButtons();
   checkPlayers();
 

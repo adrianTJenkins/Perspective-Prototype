@@ -74,7 +74,7 @@ function findBigNum() {
 function feedId() {
   var num = findBigNum();
   //console.log($('#player'+num).attr('src'));
-	return "https://www.youtube.com/embed/" + $('#player'+num).attr('src').substring(30,41) + "?autoplay=1;mute=1";
+	return "https://www.youtube.com/embed/" + $('#player'+num).attr('src').substring(30,41) + "?autoplay=1;mute=1;enablejsapi=1;controls=0;rel=0";
 }
 
 function ajax_post() {

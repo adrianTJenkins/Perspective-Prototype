@@ -221,9 +221,13 @@ button,
   width: 60%;
   margin: auto;
   position: relative;
+  text-align: center;
 }
 
+#broadcast a{
+  margin: 0 1em;
 
+}
 
 .overlay{
   position: absolute;
@@ -258,14 +262,15 @@ button,
 
 #overVid{
   width: 60vw;
-  height: calc(60vw * .5625 - 1px);
+  height: calc(60vw * .5625 );/*- 1px);*/
   display: block;
   margin-top: 25px;
+  margin-left: 1px;
 }
 
 #overVid a{
   color: #FFF;
-  line-height: calc(60vw * .5625);
+  line-height: calc(60vw );/* .5625);*/
 
 }
 
@@ -275,8 +280,8 @@ button,
   position: relative;
   text-align: center;
   /*left: 300px;
-  margin-top: 50px;
-  border: solid;
+  margin-top: 50px;*/
+  border: 1px solid;
   border-color: #B90504;*/
 }
 
